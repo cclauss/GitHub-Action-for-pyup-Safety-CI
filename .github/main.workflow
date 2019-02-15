@@ -1,9 +1,9 @@
-workflow "GitHub Action for pyup Safety" {
+workflow "on push" {
   on = "push"
-  resolves = ["safety command"]
+  resolves = ["GitHub Action for pyup Safety"]
 }
 
-action "safety command" {
+action "GitHub Action for pyup Safety" {
   uses = "cclauss/GitHub-Action-for-pyup-Safety-CI@master"
   args = "safety check --full-report"
 }
